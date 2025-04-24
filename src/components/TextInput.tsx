@@ -1,8 +1,7 @@
 import { useRef } from "react";
-
+import "./styles/TextInput.css"
 const TextInput = ({ data, fn }: { data: any; fn: any }) => {
   const inputRef: any = useRef(null);
-  console.log(inputRef);
   const btnClick = () => {
     if (inputRef.current) {
       const curr_value = inputRef.current.value;
@@ -11,8 +10,8 @@ const TextInput = ({ data, fn }: { data: any; fn: any }) => {
   };
   return (
     <div>
-      <input ref={inputRef} type="text"></input>
-      <button onClick={() => btnClick()}>Save</button>
+      <input className="input" ref={inputRef} type="text"></input>
+      <button className="button"  onClick={() => btnClick()}>Save</button>
     </div>
   );
 };

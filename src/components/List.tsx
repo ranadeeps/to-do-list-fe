@@ -1,7 +1,6 @@
 import Item from "./Item";
 
 const List = ({ data }: { data: any[] }) => {
-  console.log(data);
   return (
     <div>
       {data.map((item, key) => {
